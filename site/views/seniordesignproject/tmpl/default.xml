@@ -4,16 +4,16 @@
 		<message>COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJECT_VIEW_DEFAULT_DESC</message>
 	</layout>
 	<fields name="request">
-		<fieldset name="request">
+		<fieldset name="request"
+					addfieldpath="/administrator/components/com_seniordesignproject/models/fields">
 			<field
 					name="id"
-					type="list"
+					type="seniordesignproject"
 					label="COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJECT_FIELD_GREETING_LABEL"
 					description="COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJECT_FIELD_GREETING_DESC"
 					default="1">
-                                <option value="1">Hello World!</option>
-                                <option value="2">Good bye World!</option>
-                        </field>
+                         
+                    />
 		</fieldset>
 	</fields>
 </metadata>
