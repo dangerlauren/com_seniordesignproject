@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJCT_VIEW_DEFAULT_TITLE">
-		<message>COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJECT_VIEW_DEFAULT_DESC</message>
+	<layout title="Senior Design Project">
+		<message>Senior Design Project</message>
 	</layout>
-	<fields name="request">
-		<fieldset name="request"
-					addfieldpath="/administrator/components/com_seniordesignproject/models/fields">
-			<field
-					name="id"
-					type="seniordesignproject"
-					label="COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJECT_FIELD_GREETING_LABEL"
-					description="COM_SENIORDESIGNPROJECT_SENIORDESIGNPROJECT_FIELD_GREETING_DESC"
-					default="1">
-                         
-                    />
-		</fieldset>
-	</fields>
 </metadata>

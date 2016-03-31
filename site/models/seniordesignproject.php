@@ -17,57 +17,20 @@ defined('_JEXEC') or die('Restricted access');
  */
 class SeniorDesignProjectModelSeniorDesignProject extends JModelItem
 {
-	/**
-	 * @var array messages
-	 */
-	protected $messages;
- 
-	/**
-	 * Method to get a table object, load it if necessary.
-	 *
-	 * @param   string  $type    The table name. Optional.
-	 * @param   string  $prefix  The class prefix. Optional.
-	 * @param   array   $config  Configuration array for model. Optional.
-	 *
-	 * @return  JTable  A JTable object
-	 *
-	 * @since   1.6
-	 */
-	public function getTable($type = 'SeniorDesignProject', $prefix = 'SeniorDesignProjectTable', $config = array())
+	protected function getListQuery()
 	{
-		return JTable::getInstance($type, $prefix, $config);
-	}
+		// Initialize variables.
+		$db    = JFactory::getDbo();
+		$this->setState('list.limit', 20);
+		$query = $db->getQuery(true);
  
-	/**
-	 * Get the message
-	 *
-	 * @param   integer  $id  Greeting Id
-	 *
-	 * @return  string        Fetched String from Table for relevant Id
-	 */
-	public function getMsg($id = 1)
-	{
-		if (!is_array($this->messages))
-		{
-			$this->messages = array();
-		}
- 
-		if (!isset($this->messages[$id]))
-		{
-			// Request the selected id
-			$jinput = JFactory::getApplication()->input;
-			$id     = $jinput->get('id', 1, 'INT');
- 
-			// Get a TableSeniorDesignProject instance
-			$table = $this->getTable();
- 
-			// Load the message
-			$table->load($id);
- 
-			// Assign the message
-			$this->messages[$id] = $table->greeting;
-		}
- 
-		return $this->messages[$id];
+		// Create the base select statement.
+		$query->select($db->quoteName(array('id', 'title', 'students', 'solution', 'reqs', 'semester', 'team_photo', 'graphic1', 'graphic2', 'year', 'webcast', 'problem', 'company')))
+                ->from($db->quoteName('#__projects'))
+                ->order('year DESC');
+ 		$db->setQuery($query);
+		$db->execute();
+		$pubs = $db->loadObjectList();
+		return $query;
 	}
 }
