@@ -27,7 +27,7 @@ class SeniorDesignProjectViewSeniorDesignProject extends JViewLegacy
 	function display($tpl = null)
 	{
 		// Assign data to the view
-		$this->msg = 'Senior Design Project';
+		$this->msg = $this->get('Msg');
  
 		// Display the view
 		parent::display($tpl);
