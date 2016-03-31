@@ -11,7 +11,7 @@
 defined('_JEXEC') or die('Restricted access');
  
 /**
- * HTML View class for the HelloWorld Component
+ * HTML View class for the SeniorDesignProject Component
  *
  * @since  0.0.1
  */
