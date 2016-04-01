@@ -30,7 +30,7 @@ class SeniorDesignProjectModelSeniorDesignProject extends JModelItem
                 ->order('year DESC');
  		$db->setQuery($query);
 		$db->execute();
-		$pubs = $db->loadObjectList();
+		$seniordesignprojects = $db->loadObjectList();
 		return $query;
 	}
 }
