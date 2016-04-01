@@ -14,7 +14,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class SeniorDesignProjectsModelSeniorDesignProjects extends JModelList
+class SeniorDesignProjectSeniorDesignProjects extends JModelList
 {
 	/**
 	 * Method to build an SQL query to load the list data.
@@ -30,9 +30,7 @@ class SeniorDesignProjectsModelSeniorDesignProjects extends JModelList
 		// Create the base select statement.
 		$query->select('*')
                 ->from($db->quoteName('#__projects'));
- 		$db->setQuery($query);
-		$db->execute();
-		$pubs = $db->loadObjectList();
+ 
 		return $query;
 	}
 }
