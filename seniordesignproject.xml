@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.2.0" method="upgrade">
  
-	<name>COM_SENIORDESIGNPROJECT</name>
+	<name>Senior Design Project</name>
 	<!-- The following elements are optional and free of formatting constraints -->
 	<creationDate>March 2016</creationDate>
-	<author>UT Austin</author>
-	<authorEmail></authorEmail>
-	<authorUrl></authorUrl>
-	<copyright>Copyright Info</copyright>
-	<license>License Info</license>
+	<author>Lauren Grant</author>
+	<authorEmail>lgrant@utexas.edu</authorEmail>
+	<authorUrl>http://www.engr.utexas.edu</authorUrl>
+	<copyright>2016 Cockrell School of Engineering</copyright>
+	<license>GNU/GPL</license>
 	<!--  The version string is recorded in the components table -->
 	<version>0.0.8</version>
 	<!-- The description is optional and defaults to the name -->
-	<description>COM_SENIORDESIGNPROJECT_DESCRIPTION</description>
- 
-	<update> <!-- Runs on update; New since J2.5 -->
-		<schemas>
-			<schemapath type="mysql">sql/updates/mysql</schemapath>
-		</schemas>
-	</update>
+	<description>This component manages senior design projects</description>
  
 	<!-- Site Main File Copy Section -->
 	<!-- Note the folder attribute: This attribute describes the folder
@@ -38,7 +32,7 @@
  
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu link='index.php?option=com_seniordesignproject'>COM_SENIORDESIGNPROJECT_MENU</menu>
+		<menu link='index.php?option=com_seniordesignproject'>Senior Design Project</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 			to copy FROM in the package to install therefore files copied
@@ -48,8 +42,6 @@
 			<filename>index.html</filename>
 			<filename>seniordesignproject.php</filename>
 			<filename>controller.php</filename>
-			<!-- SQL files section -->
-			<folder>sql</folder>
 			<!-- tables files section -->
 			<folder>tables</folder>
 			<!-- models files section -->

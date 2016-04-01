@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class SeniorDesignProjectViewSeniorDesignProject extends JViewLegacy
+class SeniorDesignProjectViewDefault extends JViewLegacy
 {
 	/**
 	 * Display the Senior Design Project view

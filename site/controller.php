@@ -15,4 +15,5 @@ defined('_JEXEC') or die('Restricted access');
  */
 class SeniorDesignProjectController extends JControllerLegacy
 {
+	
 }
