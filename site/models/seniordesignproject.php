@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class SeniorDesignProjectModelDefault extends JModelItem
+class SeniorDesignProjectModelSeniorDesignProject extends JModelItem
 {
 	protected function getListQuery()
 	{
